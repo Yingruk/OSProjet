@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>Test Docker</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    </script>
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $.get("query.php", {
+                data1: $("#number").val(),
+                data2: $("#one").val(),
+                data3: $("#two").val()
+            },
+                function (data) {
+                    $("#div1").html(data);
+                }
+            );
+        });
+    });
+</script>
+
+<body>
+
+    <CENTER>
+        <h1>Base conversion</h1><br>
+        <h1>input your number</h1><br>
+
+        <input type="number" id="number" size="100" /><br><br>
+        <h3>What is your base number?</h3>
+        (2 , 8 , 10 or 16)<br><br>
+        <input type="number" id="one" size="100" /><br><br>
+        <h1>covert to</h1>
+        (2 , 8 , 10 or 16)<br><br>
+        <input type="number" id="two" size="100" /><br><br>
+        <input type="button" id="btn1" value="let's go"><br>
+        <h1>
+            <div answer : id="div1"></div>
+        </h1><br>
+
+    </CENTER>
+
+
+</body>
+
+
+</html>
